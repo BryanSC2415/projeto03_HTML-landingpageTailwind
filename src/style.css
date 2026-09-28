@@ -1,0 +1,6 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+
+@theme {
+  --font-stencil: "Saira Stencil One", sans-serif;
+}

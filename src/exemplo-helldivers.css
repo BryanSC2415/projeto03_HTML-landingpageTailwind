@@ -1,0 +1,75 @@
+@import "tailwindcss" source(none);
+@source "../exemplo-helldivers.html";
+
+@theme {
+  --color-terra-amarelo: #ffe711;
+  --color-terra-preto: #0a0a0b;
+  --color-terra-grafite: #141619;
+  --color-terra-aco: #262a2f;
+  --color-terra-azul: #3fb8e0;
+  --color-terra-vermelho: #e0402b;
+  --color-terra-texto: #e9e6da;
+  --color-terra-suave: #9a9a90;
+
+  --font-stencil: "Saira Stencil One", "Impact", sans-serif;
+  --font-tatico: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+
+  --animate-letreiro: letreiro 28s linear infinite;
+  --animate-surgir: surgir 0.7s ease both;
+  --animate-piscar: piscar 1.2s steps(2, start) infinite;
+  --animate-queda: queda 0.9s cubic-bezier(0.55, 0, 1, 0.45) both;
+  --animate-impacto: impacto 0.4s ease-out 0.9s both;
+
+  @keyframes letreiro {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @keyframes surgir {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes piscar {
+    to { visibility: hidden; }
+  }
+  @keyframes queda {
+    from { transform: translateY(-160px); }
+    to   { transform: translateY(0); }
+  }
+  @keyframes impacto {
+    0%   { opacity: 0.9; transform: scale(0.2); }
+    100% { opacity: 0;   transform: scale(2.4); }
+  }
+}
+
+@utility faixa-perigo {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-terra-amarelo) 0 14px,
+    var(--color-terra-preto) 14px 28px
+  );
+}
+
+@utility linhas-crt {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0.035) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+@utility grade-tatica {
+  background-image:
+    linear-gradient(rgb(255 231 17 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 231 17 / 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility canto-cortado {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}

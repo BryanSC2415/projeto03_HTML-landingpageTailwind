@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helldivers — Alistamento</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="dist/exemplo-helldivers.css" />
+</head>
+<body class="min-h-screen overflow-x-hidden bg-terra-preto font-tatico text-terra-texto">
+
+  <div class="pointer-events-none fixed inset-0 z-0 grade-tatica" aria-hidden="true"></div>
+  <div class="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top,rgb(255_231_17/0.14),transparent_60%)]" aria-hidden="true"></div>
+  <div class="pointer-events-none fixed inset-0 z-50 linhas-crt" aria-hidden="true"></div>
+
+  <div class="relative z-10 overflow-hidden border-b border-terra-amarelo/30 bg-terra-amarelo py-1.5 text-terra-preto">
+    <div class="flex w-max motion-safe:animate-letreiro">
+      <p class="shrink-0 px-6 text-xs font-bold tracking-[0.3em] uppercase">
+        ▲ Transmissão do Ministério da Verdade ▲ A liberdade não se espalha sozinha ▲ Terminídeos avistados no setor Umlaut ▲ Autômatos recuam em Malevelon Creek ▲ Denuncie comportamento antidemocrático ▲
+      </p>
+      <p class="shrink-0 px-6 text-xs font-bold tracking-[0.3em] uppercase" aria-hidden="true">
+        ▲ Transmissão do Ministério da Verdade ▲ A liberdade não se espalha sozinha ▲ Terminídeos avistados no setor Umlaut ▲ Autômatos recuam em Malevelon Creek ▲ Denuncie comportamento antidemocrático ▲
+      </p>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-40 flex items-center justify-between gap-6 border-b-4 border-terra-amarelo bg-terra-preto/95 px-6 py-4 backdrop-blur">
+    <a href="#topo" class="flex items-center gap-3 no-underline">
+      <span class="grid size-10 place-items-center rounded-full border-2 border-terra-amarelo text-lg text-terra-amarelo">★</span>
+      <span class="font-stencil text-2xl tracking-wider text-terra-texto">Super <span class="text-terra-amarelo">Terra</span></span>
+    </a>
+    <nav class="flex items-center gap-6 text-sm font-semibold tracking-widest uppercase">
+      <a href="#missao" class="hidden text-terra-suave transition-colors hover:text-terra-amarelo md:inline">A missão</a>
+      <a href="#estratagemas" class="hidden text-terra-suave transition-colors hover:text-terra-amarelo md:inline">Estratagemas</a>
+      <a href="#alistamento" class="bg-terra-amarelo px-4 py-2 font-bold text-terra-preto transition hover:bg-white canto-cortado">Alistar-se</a>
+    </nav>
+  </header>
+
+  <main id="topo" class="relative z-10">
+
+    <section class="mx-auto grid max-w-6xl items-center gap-12 px-6 pt-16 pb-24 lg:grid-cols-[1.2fr_1fr]">
+      <div class="text-center lg:text-left">
+        <p class="flex items-center justify-center gap-2 text-xs font-bold tracking-[0.35em] text-terra-amarelo uppercase motion-safe:animate-surgir lg:justify-start">
+          <span class="inline-block size-2 rounded-full bg-terra-vermelho motion-safe:animate-piscar"></span>
+          Ministério da Defesa · Transmissão oficial
+        </p>
+
+        <h1 class="mt-4 font-stencil text-[clamp(4rem,13vw,8.5rem)] leading-[0.85] text-terra-amarelo [text-shadow:6px_6px_0_var(--color-terra-aco)] motion-safe:animate-surgir">
+          Hell<br class="hidden lg:block" />divers
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-xl text-lg text-terra-suave motion-safe:animate-surgir lg:mx-0">
+          A galáxia está sob ataque. Insetos, robôs e ideias perigosas ameaçam
+          nosso modo de vida. <strong class="text-terra-texto">Super Terra precisa de você</strong>
+          para levar a Liberdade e a Democracia Gerenciada a cada canto das estrelas.
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3 text-xs font-bold tracking-widest uppercase lg:justify-start">
+          <span class="border border-terra-amarelo/40 px-3 py-1.5 text-terra-amarelo">Salário competitivo*</span>
+          <span class="border border-terra-amarelo/40 px-3 py-1.5 text-terra-amarelo">Viagens interestelares</span>
+          <span class="border border-terra-amarelo/40 px-3 py-1.5 text-terra-amarelo">Glória eterna</span>
+        </div>
+        <p class="mt-3 text-xs text-terra-suave/60">*Pago à família em caso de morte heroica.</p>
+      </div>
+
+      <div id="alistamento" class="relative scroll-mt-28 motion-safe:animate-surgir">
+        <div class="h-3 faixa-perigo"></div>
+        <div class="border-x-2 border-b-2 border-terra-amarelo/60 bg-terra-grafite p-7">
+
+          <div id="alistamento-enviado" class="peer/sucesso hidden text-center target:block target:motion-safe:animate-surgir">
+            <div class="relative mx-auto mb-4 h-40 w-24 overflow-hidden">
+              <div class="absolute bottom-2 left-1/2 size-16 -translate-x-1/2 rounded-full border-4 border-terra-amarelo motion-safe:animate-impacto"></div>
+              <div class="absolute bottom-2 left-1/2 -translate-x-1/2 motion-safe:animate-queda">
+                <div class="mx-auto h-10 w-3 bg-gradient-to-t from-terra-vermelho to-transparent blur-[2px]"></div>
+                <div class="h-14 w-9 rounded-t-full border-2 border-terra-preto bg-terra-aco">
+                  <div class="mx-auto mt-4 h-2 w-5 bg-terra-amarelo"></div>
+                </div>
+              </div>
+            </div>
+            <h2 class="font-stencil text-3xl text-terra-amarelo">Bem-vindo, Helldiver!</h2>
+            <p class="mt-3 text-terra-suave">
+              Seu alistamento foi registrado pelo Ministério da Defesa. Um
+              <strong class="text-terra-texto">Destróier Estelar</strong> entrará em contato
+              pelo seu e-mail. Até lá, mantenha a Democracia no coração.
+            </p>
+            <a href="#alistamento" class="mt-6 inline-block border-2 border-terra-amarelo px-6 py-3 font-bold tracking-widest text-terra-amarelo uppercase transition hover:bg-terra-amarelo hover:text-terra-preto">
+              Alistar outro cidadão
+            </a>
+          </div>
+
+          <form class="group peer-target/sucesso:hidden">
+            <p class="text-xs font-bold tracking-[0.3em] text-terra-vermelho uppercase">Formulário SE-001</p>
+            <h2 class="mt-1 font-stencil text-3xl">Aliste-se hoje</h2>
+            <p class="mt-2 text-sm text-terra-suave">
+              Preencha seus dados, cidadão. A liberdade não vai se defender sozinha.
+            </p>
+
+            <label for="codinome" class="mt-6 block text-xs font-bold tracking-widest text-terra-suave uppercase">Nome de guerra</label>
+            <input
+              id="codinome"
+              name="codinome"
+              type="text"
+              placeholder="Ex: Capitão Liberdade"
+              required
+              class="mt-2 w-full border border-white/15 bg-white/5 px-4 py-3 placeholder:text-terra-suave/50 focus:border-terra-amarelo focus:ring-2 focus:ring-terra-amarelo/30 focus:outline-none"
+            />
+
+            <label for="email" class="mt-4 block text-xs font-bold tracking-widest text-terra-suave uppercase">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="cidadao@superterra.gov"
+              pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+              required
+              class="peer/email mt-2 w-full border border-white/15 bg-white/5 px-4 py-3 placeholder:text-terra-suave/50 focus:border-terra-amarelo focus:ring-2 focus:ring-terra-amarelo/30 focus:outline-none user-invalid:border-terra-vermelho user-invalid:ring-2 user-invalid:ring-terra-vermelho/30"
+            />
+            <p class="mt-2 hidden text-sm font-bold text-terra-vermelho peer-user-invalid/email:block">
+              E-mail inválido. Isso parece... antidemocrático.
+            </p>
+
+            <label class="mt-5 flex cursor-pointer items-start gap-3 text-sm text-terra-suave">
+              <input type="checkbox" required class="mt-1 size-4 accent-terra-amarelo" />
+              Juro lealdade eterna à Super Terra e à Democracia Gerenciada.
+            </label>
+
+            <a
+              href="#alistamento-enviado"
+              class="mt-6 block bg-terra-amarelo py-4 text-center font-stencil text-xl tracking-wider text-terra-preto transition canto-cortado hover:bg-white active:translate-y-0.5 group-invalid:pointer-events-none group-invalid:opacity-40 group-invalid:grayscale"
+            >
+              Pela Liberdade!
+            </a>
+
+            <p class="mt-4 text-xs text-terra-suave/60">
+              Ao se alistar, você concorda em receber propaganda patriótica. Desistir é traição.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-terra-amarelo/20 bg-terra-grafite/80">
+      <div class="mx-auto grid max-w-6xl grid-cols-2 gap-px bg-terra-amarelo/10 md:grid-cols-4">
+        <div class="bg-terra-grafite px-6 py-8 text-center">
+          <p class="font-stencil text-4xl text-terra-amarelo">1.284</p>
+          <p class="mt-1 text-xs tracking-widest text-terra-suave uppercase">Planetas libertados</p>
+        </div>
+        <div class="bg-terra-grafite px-6 py-8 text-center">
+          <p class="font-stencil text-4xl text-terra-amarelo">9,8 bi</p>
+          <p class="mt-1 text-xs tracking-widest text-terra-suave uppercase">Terminídeos eliminados</p>
+        </div>
+        <div class="bg-terra-grafite px-6 py-8 text-center">
+          <p class="font-stencil text-4xl text-terra-amarelo">3,1 bi</p>
+          <p class="mt-1 text-xs tracking-widest text-terra-suave uppercase">Autômatos desmontados</p>
+        </div>
+        <div class="bg-terra-grafite px-6 py-8 text-center">
+          <p class="font-stencil text-4xl text-terra-vermelho">0</p>
+          <p class="mt-1 text-xs tracking-widest text-terra-suave uppercase">Dúvidas sobre a Democracia</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="missao" class="mx-auto max-w-6xl scroll-mt-24 px-6 py-24">
+      <p class="text-center text-xs font-bold tracking-[0.35em] text-terra-vermelho uppercase">Briefing</p>
+      <h2 class="mt-2 text-center font-stencil text-[clamp(2.4rem,6vw,3.8rem)] text-terra-amarelo">Por que se alistar?</h2>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <article class="group/card border-l-4 border-terra-amarelo bg-terra-grafite p-7 transition hover:-translate-y-1 hover:bg-terra-aco">
+          <p class="font-stencil text-5xl text-terra-amarelo/20 transition group-hover/card:text-terra-amarelo">01</p>
+          <h3 class="mt-2 text-xl font-bold tracking-wide uppercase">Espalhe a Democracia</h3>
+          <p class="mt-2 text-sm text-terra-suave">Leve a Liberdade a planetas que ainda não sabem que precisam dela. Com muito, muito fogo.</p>
+        </article>
+        <article class="group/card border-l-4 border-terra-amarelo bg-terra-grafite p-7 transition hover:-translate-y-1 hover:bg-terra-aco">
+          <p class="font-stencil text-5xl text-terra-amarelo/20 transition group-hover/card:text-terra-amarelo">02</p>
+          <h3 class="mt-2 text-xl font-bold tracking-wide uppercase">Arsenal de ponta</h3>
+          <p class="mt-2 text-sm text-terra-suave">Bombardeios orbitais, Águias de 500kg e mechas. Tudo a um código de distância.</p>
+        </article>
+        <article class="group/card border-l-4 border-terra-amarelo bg-terra-grafite p-7 transition hover:-translate-y-1 hover:bg-terra-aco">
+          <p class="font-stencil text-5xl text-terra-amarelo/20 transition group-hover/card:text-terra-amarelo">03</p>
+          <h3 class="mt-2 text-xl font-bold tracking-wide uppercase">Irmandade de elite</h3>
+          <p class="mt-2 text-sm text-terra-suave">Mergulhe em esquadrões de até 4. Fogo amigo? Não existe. Só acidentes patrióticos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="estratagemas" class="scroll-mt-24 border-t border-terra-amarelo/20 bg-terra-grafite/60 py-24">
+      <div class="mx-auto max-w-6xl px-6">
+        <p class="text-center text-xs font-bold tracking-[0.35em] text-terra-vermelho uppercase">Treinamento básico</p>
+        <h2 class="mt-2 text-center font-stencil text-[clamp(2.4rem,6vw,3.8rem)] text-terra-amarelo">Decore seus estratagemas</h2>
+        <p class="mx-auto mt-4 max-w-xl text-center text-terra-suave">
+          Todo Helldiver chama apoio do Destróier Estelar digitando códigos. Errar a sequência pode custar sua vida. Ou a do colega.
+        </p>
+
+        <ul class="mt-12 grid gap-4 sm:grid-cols-2">
+          <li class="flex items-center justify-between gap-4 bg-terra-preto/70 p-5 ring-1 ring-white/10 transition hover:ring-terra-amarelo">
+            <span class="font-bold tracking-wide uppercase">Reforço</span>
+            <span class="flex gap-1.5 text-terra-amarelo">
+              <kbd class="grid size-8 place-items-center bg-terra-aco">▲</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▼</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▶</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">◀</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▲</kbd>
+            </span>
+          </li>
+          <li class="flex items-center justify-between gap-4 bg-terra-preto/70 p-5 ring-1 ring-white/10 transition hover:ring-terra-amarelo">
+            <span class="font-bold tracking-wide uppercase">Reabastecer</span>
+            <span class="flex gap-1.5 text-terra-amarelo">
+              <kbd class="grid size-8 place-items-center bg-terra-aco">▼</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▼</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▲</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▶</kbd>
+            </span>
+          </li>
+          <li class="flex items-center justify-between gap-4 bg-terra-preto/70 p-5 ring-1 ring-white/10 transition hover:ring-terra-amarelo">
+            <span class="font-bold tracking-wide uppercase">Águia 500kg</span>
+            <span class="flex gap-1.5 text-terra-amarelo">
+              <kbd class="grid size-8 place-items-center bg-terra-aco">▲</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▶</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▼</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▼</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▼</kbd>
+            </span>
+          </li>
+          <li class="flex items-center justify-between gap-4 bg-terra-preto/70 p-5 ring-1 ring-white/10 transition hover:ring-terra-amarelo">
+            <span class="font-bold tracking-wide uppercase">Ataque orbital de precisão</span>
+            <span class="flex gap-1.5 text-terra-amarelo">
+              <kbd class="grid size-8 place-items-center bg-terra-aco">▶</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▶</kbd><kbd class="grid size-8 place-items-center bg-terra-aco">▲</kbd>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-6 py-24 text-center">
+      <h2 class="font-stencil text-[clamp(2.4rem,6vw,3.8rem)] text-terra-amarelo">Do sofá ao Hellpod</h2>
+
+      <ol class="mt-12 grid gap-6 text-left md:grid-cols-3">
+        <li class="relative bg-terra-grafite p-7 canto-cortado">
+          <span class="font-stencil text-2xl text-terra-preto bg-terra-amarelo px-3 py-1">1</span>
+          <h3 class="mt-4 text-lg font-bold uppercase">Preencha o formulário</h3>
+          <p class="mt-2 text-sm text-terra-suave">Nome de guerra, e-mail e um juramento sincero. Só isso.</p>
+        </li>
+        <li class="relative bg-terra-grafite p-7 canto-cortado">
+          <span class="font-stencil text-2xl text-terra-preto bg-terra-amarelo px-3 py-1">2</span>
+          <h3 class="mt-4 text-lg font-bold uppercase">Treinamento básico</h3>
+          <p class="mt-2 text-sm text-terra-suave">Seis minutos de treino. Mais do que suficiente, segundo o Ministério.</p>
+        </li>
+        <li class="relative bg-terra-grafite p-7 canto-cortado">
+          <span class="font-stencil text-2xl text-terra-preto bg-terra-amarelo px-3 py-1">3</span>
+          <h3 class="mt-4 text-lg font-bold uppercase">Mergulhe no inferno</h3>
+          <p class="mt-2 text-sm text-terra-suave">Seu Hellpod cai do Destróier Estelar direto na linha de frente.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="relative overflow-hidden">
+      <div class="h-4 faixa-perigo"></div>
+      <div class="bg-terra-amarelo px-6 py-20 text-center text-terra-preto">
+        <h2 class="font-stencil text-[clamp(2.2rem,7vw,4.5rem)] leading-none">Você está fazendo a sua parte?</h2>
+        <p class="mx-auto mt-4 max-w-lg font-semibold">Cada segundo sem se alistar é um segundo a mais para o inimigo.</p>
+        <a href="#alistamento" class="mt-8 inline-block bg-terra-preto px-10 py-4 font-stencil text-xl tracking-wider text-terra-amarelo transition canto-cortado hover:scale-105">
+          Quero me alistar
+        </a>
+      </div>
+      <div class="h-4 faixa-perigo"></div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 bg-terra-preto px-6 py-12 text-center">
+    <p class="font-stencil text-2xl tracking-wider">Super <span class="text-terra-amarelo">Terra</span></p>
+    <nav class="mt-4 flex justify-center gap-6 text-xs tracking-widest text-terra-suave uppercase">
+      <a href="#" class="hover:text-terra-amarelo">Termos de serviço</a>
+      <a href="#" class="hover:text-terra-amarelo">Privacidade</a>
+      <a href="#" class="hover:text-terra-amarelo">Denunciar traidor</a>
+    </nav>
+    <p class="mt-6 text-xs text-terra-suave/50">
+      Uma mensagem do Ministério da Verdade. Fã-page sem vínculo oficial com Helldivers 2.
+    </p>
+  </footer>
+</body>
+</html>

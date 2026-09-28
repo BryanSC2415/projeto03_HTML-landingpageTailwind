@@ -1,0 +1,16 @@
+{
+  "name": "tailpage",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n exemplo,voce -c yellow,cyan \"npm:dev:exemplo\" \"npm:dev:voce\"",
+    "dev:exemplo": "tailwindcss -i ./src/exemplo-helldivers.css -o ./dist/exemplo-helldivers.css --watch",
+    "dev:voce": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
+    "build": "tailwindcss -i ./src/exemplo-helldivers.css -o ./dist/exemplo-helldivers.css --minify && tailwindcss -i ./src/style.css -o ./dist/style.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "concurrently": "^10.0.5",
+    "tailwindcss": "^4.3.3"
+  }
+}
